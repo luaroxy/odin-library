@@ -24,7 +24,7 @@
     gap: 1rem;
     padding: 1rem 2rem;
     position: relative;
-    z-index: 10;
+    z-index: 2;
     font-family: 'Wigenda';
 }
 
@@ -127,3 +127,69 @@ width: 10rem;
     white-space: pre-line;
 }
 
+.top-profile > *:hover, .profile-info img:hover, button{
+    cursor: pointer;
+  }
+  
+  .top-profile > *:active, .profile-info img:active{
+    transform: scale(1.05);
+  }
+  
+  .card:hover{
+    transform: scale(1.03);
+  }
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 25px;
+    background-color: white;
+    border: 0.15rem solid black;
+    border-radius: 0.8rem;
+    box-shadow: 7px 8px 8px rgb(175, 172, 172);
+}
+
+.form-container input {
+border: 0.1rem solid black;
+background: #88888861;
+border-radius: 0.3rem;
+width: 95%;
+margin-bottom: 1rem;
+}
+
+.form-container input:focus{
+    background-color: rgb(148, 144, 144);
+    outline: none;
+}
+  
+.form-container .btn {
+background-color: #04AA6D;
+color: white;
+padding: 0.5rem 0.8rem;
+border: none;
+cursor: pointer;
+width: 40%;
+opacity: 0.8;
+}
+
+.form-buttons .cancel {
+background-color: red;
+}
+
+.form-buttons .btn:hover, .open-button:hover {
+opacity: 1;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

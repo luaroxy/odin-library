@@ -12,11 +12,11 @@ Book.prototype.info = function(){
 }
 
 function addBookToLibrary() {
-    let title = prompt("Please enter the title");
-    let author = prompt("Please enter the author");
-    let pages = prompt("Please enter the pages");
-    let read = prompt("Did you read the book?");
-    const newBook = new Book(title,author,pages,read);
+    let title = form.elements["title"];
+    let author = form.elements["author"];
+    let pages = form.elements["pages"];
+    let read = form.elements["read"];
+    const newBook = new Book(title.value,author.value,pages.value,read.value);
     myLibrary.push(newBook);
     
     let card = document.createElement("div");
@@ -29,14 +29,20 @@ function addBookToLibrary() {
     cardsContainer.appendChild(card);
   }
 
-document.getElementById("addBtn").addEventListener('click', () => {
-    addBookToLibrary();
-})
+const form = document.getElementById("bookForm");
+form.addEventListener("submit", function (e) {
+	e.preventDefault();
+  addBookToLibrary();
+  form.reset();
+  closeForm();
+});
 
-/*myLibrary.forEach(function(element, index, array){
-    let tag = document.createElement("p");
-    let text = document.createTextNode(myLibrary[index].title);
-    tag.appendChild(text);
-    let cont = document.getElementById("container");
-    cont.appendChild(tag);
-  });*/
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+  
