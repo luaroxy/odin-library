@@ -118,6 +118,7 @@ width: 10rem;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 7px 8px 8px rgb(175, 172, 172);
+    position: relative;
   }
 
 .card p{
@@ -192,4 +193,18 @@ opacity: 1;
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.cardButton{
+    background-image: url(images/delete.png);
+    padding: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
 }

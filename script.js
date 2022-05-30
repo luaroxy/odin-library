@@ -19,13 +19,17 @@ function addBookToLibrary() {
     const newBook = new Book(title.value,author.value,pages.value,read.value);
     myLibrary.push(newBook);
     
+    let cardsContainer = document.getElementById("cards-container");
     let card = document.createElement("div");
     let cardP = document.createElement("p");
-    let cardsContainer = document.getElementById("cards-container");
+    let cardsButton = document.createElement("button");
 
     card.classList.add("card");
     cardP.textContent = newBook.info();
     card.appendChild(cardP);
+    cardsButton.classList.add("cardButton");
+    cardsButton.setAttribute("onclick","deleteCard(this)");
+    card.appendChild(cardsButton);
     cardsContainer.appendChild(card);
   }
 
@@ -45,4 +49,6 @@ form.addEventListener("submit", function (e) {
     document.getElementById("myForm").style.display = "none";
   }
 
-  
+  function deleteCard(e) {
+    e.closest(".card").remove();
+}
