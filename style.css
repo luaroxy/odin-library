@@ -16,6 +16,7 @@
     height: 100vh;
 }
 
+/*Header*/
 .header {
     background-color: #f5f4f1ec;
     display: grid;
@@ -35,59 +36,68 @@
 }
 
 .search-bar img{
-width: 1.5rem;
-display: flex;
+    width: 1.5rem;
+    display: flex;
 }
   
 input{
-width: 80%;
-border-radius: 1rem;
-background-color: white    ;
+    width: 80%;
+    border-radius: 1rem;
+    background-color: white;
 }
   
 .top-profile, .buttons{
-display: flex;
-align-items: center;
-gap: 1rem;
-justify-content: end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: end;
 }
   
 .top-profile img:first-child{
-width: 2.2rem;
-border-radius: 50%;
+    width: 2.2rem;
+    border-radius: 50%;
 }
   
 .top-profile{
-font-size: 1rem;
-font-weight: bold;
-letter-spacing: 0.01rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.01rem;
 }
   
 .profile-info img{
-width: 4rem;
-border-radius: 50%;
+    width: 4rem;
+    border-radius: 50%;
 }
   
 .profile-info div p:first-child{
-margin: 0;
-font-size: 0.75rem;
+    margin: 0;
+    font-size: 0.75rem;
 }
   
 .profile-info div p:nth-child(2){
-margin: 0;
-font-size: 1.25rem;
-font-weight:700;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight:700;
 }
   
 button{
-background-color: white;
-border-radius: 1rem;
-padding: 0.4rem 1.5rem;
-font-size: 0.9em;
-font-weight: 600;
-width: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 10rem;
 }
 
+.top-profile > *:hover, .profile-info img:hover, button{
+    cursor: pointer;
+}
+  
+.top-profile > *:active, .profile-info img:active{
+    transform: scale(1.05);
+}
+
+/*Books*/
 .books{
     background: url(images/texture.jpg);
     padding: 1rem;
@@ -103,10 +113,10 @@ width: 10rem;
 }
 
 #cards-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
-  grid-auto-rows: 1fr;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
 }
 
 .card {
@@ -121,25 +131,32 @@ width: 10rem;
     position: relative;
   }
 
-.card p{
+.card p, .card label{
     font-family: 'Wigenda';
     margin:0;
     font-size: 1rem;
     white-space: pre-line;
 }
 
-.top-profile > *:hover, .profile-info img:hover, button{
-    cursor: pointer;
-  }
-  
-  .top-profile > *:active, .profile-info img:active{
-    transform: scale(1.05);
-  }
-  
-  .card:hover{
-    transform: scale(1.03);
-  }
+.cardButton{
+    background-image: url(images/delete.png);
+    padding: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
 
+.card:hover{
+    transform: scale(1.03);
+}
+
+/*Form*/
 .form-popup {
     display: none;
     position: fixed;
@@ -159,11 +176,11 @@ width: 10rem;
 }
 
 .form-container input {
-border: 0.1rem solid black;
-background: #88888861;
-border-radius: 0.3rem;
-width: 95%;
-margin-bottom: 1rem;
+    border: 0.1rem solid black;
+    background: #88888861;
+    border-radius: 0.3rem;
+    width: 95%;
+    margin-bottom: 1rem;
 }
 
 .form-container input:focus{
@@ -172,21 +189,21 @@ margin-bottom: 1rem;
 }
   
 .form-container .btn {
-background-color: #04AA6D;
-color: white;
-padding: 0.5rem 0.8rem;
-border: none;
-cursor: pointer;
-width: 40%;
-opacity: 0.8;
+    background-color: #04AA6D;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.8;
 }
 
 .form-buttons .cancel {
-background-color: red;
+    background-color: red;
 }
 
 .form-buttons .btn:hover, .open-button:hover {
-opacity: 1;
+    opacity: 1;
 }
 
 .form-buttons{
@@ -195,16 +212,22 @@ opacity: 1;
     gap: 1rem;
 }
 
-.cardButton{
-    background-image: url(images/delete.png);
-    padding: 0.75rem;
-    width: 0.75rem;
-    border-radius: 50%;
-    border: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
+label {
+    display: block;
 }
+
+#read {
+    width: 1rem;
+    vertical-align: baseline;
+}
+
+.form-container label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+
+
+

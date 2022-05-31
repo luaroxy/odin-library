@@ -34,20 +34,6 @@
         <div class="books">
             <p>Your Books</p>
             <div id="cards-container">
-                <div class="card">
-                    <p>Title: The Hobbit</p>
-                    <p>Author: J.R.R. Tolkien</p>
-                    <p>Pages: 295</p>
-                    <p>Read: no</p>
-                   <!-- <button onclick="deleteCard(this)" id="cardsButton">Delete</button>-->
-                </div>
-
-                <div class="card">
-                    <p>Title: The Hobbit</p>
-                    <p>Author: J.R.R. Tolkien</p>
-                    <p>Pages: 295</p>
-                    <p>Read: no</p>
-                </div>
             </div>
         </div>
 
@@ -62,10 +48,9 @@
           <input type="text" name="author" required>
 
           <label for="pages"><b>Pages<abbr title="required" aria-label="required">*</b></label>
-          <input type="text" name="pages" required>
+          <input type="number" name="pages" required>
       
-          <label for="read"><b>Read<abbr title="required" aria-label="required">*</b></label>
-          <input type="text" name="read" required>
+          <label for="read">Read? <input type="checkbox" id="read" class="readBtn" name="read"></label> 
           
           <div class="form-buttons">
             <button type="submit" id="addBtn" class="btn">Add</button>
