@@ -14,6 +14,4 @@ Font: <a href="https://www.dafont.com/themes.php">Dafont </a>
 \
 Profile Picture: <a href="https://unsplash.com/photos/tw5_DJQaeDU">Tamara Bellis</a> on <a href="https://unsplash.com/">Unsplash</a>
 \
-Paper texture (background): <a href="https://unsplash.com/photos/vS3idIiYxX0">
-\
-Olga Thelavart</a> on <a href="https://unsplash.com/">Unsplash</a>
+Paper texture (background): <a href="https://unsplash.com/photos/vS3idIiYxX0">Olga Thelavart</a> on <a href="https://unsplash.com/">Unsplash</a>
