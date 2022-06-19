@@ -36,7 +36,7 @@
 }
 
 .search-bar img{
-    width: 1.5rem;
+    width: calc(1rem + 1vw);
     display: flex;
 }
   
@@ -54,29 +54,29 @@ input{
 }
   
 .top-profile img:first-child{
-    width: 2.2rem;
+    width: calc(1.7rem + 1vw);
     border-radius: 50%;
 }
   
 .top-profile{
-    font-size: 1rem;
+    font-size: calc(0.4rem + 1vw);
     font-weight: bold;
     letter-spacing: 0.01rem;
 }
   
 .profile-info img{
-    width: 4rem;
+    width: calc(3.2rem + 1vw);
     border-radius: 50%;
 }
   
 .profile-info div p:first-child{
     margin: 0;
-    font-size: 0.75rem;
+    font-size: calc(0.1rem + 1vw);
 }
   
 .profile-info div p:nth-child(2){
     margin: 0;
-    font-size: 1.25rem;
+    font-size: calc(0.6rem + 1vw);
     font-weight:700;
 }
   
@@ -84,9 +84,9 @@ button{
     background-color: white;
     border-radius: 1rem;
     padding: 0.4rem 1.5rem;
-    font-size: 0.9em;
+    font-size: calc(0.3rem + 1vw);
     font-weight: 600;
-    width: 10rem;
+    width: calc(10rem + 1vw);
 }
 
 .top-profile > *:hover, .profile-info img:hover, button{
@@ -108,13 +108,13 @@ button{
 
 .books p{
     font-family: 'Sketchzone' ;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 1vw);
     margin:0;
 }
 
 #cards-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
     grid-auto-rows: 1fr;
     gap: 1rem;
 }
@@ -134,7 +134,7 @@ button{
 .card p, .card label{
     font-family: 'Wigenda';
     margin:0;
-    font-size: 1rem;
+    font-size: calc(0.3rem + 1vw);
     white-space: pre-line;
 }
 
@@ -167,7 +167,7 @@ button{
 }
 
 .form-container {
-    max-width: 300px;
+    min-width: 15vw;
     padding: 25px;
     background-color: white;
     border: 0.15rem solid black;
@@ -223,7 +223,7 @@ label {
 
 .form-container label{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
+    font-size: calc(0.4rem + 1vw);
     font-weight: 700;
 }
 
