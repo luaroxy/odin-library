@@ -1,14 +1,17 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title
-  this.author = author
-  this.pages = pages
-  this.read = read
-}
+class Book {
 
-Book.prototype.info = function(){
-  return `Title: ${this.title} \r\nAuthor: ${this.author} \r\nPages: ${this.pages}`;
+    constructor(title, author, pages, read){
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.read = read;
+    }
+
+    info(){
+      return `Title: ${this.title} \r\nAuthor: ${this.author} \r\nPages: ${this.pages}`;
+    }
 }
 
 function addBookToLibrary() {
