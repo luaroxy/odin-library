@@ -173,6 +173,7 @@ button{
     border: 0.15rem solid black;
     border-radius: 0.8rem;
     box-shadow: 7px 8px 8px rgb(175, 172, 172);
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .form-container input {
@@ -180,7 +181,6 @@ button{
     background: #88888861;
     border-radius: 0.3rem;
     width: 95%;
-    margin-bottom: 1rem;
 }
 
 .form-container input:focus{
@@ -210,6 +210,7 @@ button{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 label {
@@ -225,9 +226,23 @@ label {
     font-family: 'Courier New', Courier, monospace;
     font-size: calc(0.4rem + 1vw);
     font-weight: 700;
+    margin-top: 1rem;
 }
 
+/*Form Validation*/
+.help {
+    display: none;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0.2em 0 1em 0;
+    color: #c00;
+  }
 
-
-
+  .invalid .help {
+    display: block;
+  }
+  
+  .invalid input {
+    border-color: #c00;
+  }
 

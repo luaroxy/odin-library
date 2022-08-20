@@ -68,13 +68,12 @@ function createCard(newBook){
   cardsContainer.appendChild(card);
 }
 
-//Add new book when form is submitted
+//Add new book when form is submitted and validated
 const form = document.getElementById("bookForm");
+form.noValidate = true;
 form.addEventListener("submit", function (e) {
 	e.preventDefault();
-  addBookToLibrary();
-  form.reset();
-  closeForm();
+  validateForm(e);
 });
 
 function openForm() {
@@ -159,3 +158,42 @@ window.addEventListener("load", function(event) {
     }
   }
 });
+
+
+////validateForm//////
+function validateForm(e) {
+
+  const form = e.target;
+  const field = Array.from(form.elements);
+  
+  // reset fields
+  field.forEach(i => {
+    i.setCustomValidity('');
+    i.parentElement.classList.remove('invalid');
+  });
+  
+  if (!form.checkValidity()) {
+
+    // form is invalid - cancel submit
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    // apply invalid class
+    field.forEach(i => {
+
+      if (!i.checkValidity()) {
+
+        // field is invalid - add class
+        i.parentElement.classList.add('invalid');
+
+      }
+
+    });
+
+  } else {
+    addBookToLibrary();
+    form.reset();
+    closeForm();
+  }
+
+}

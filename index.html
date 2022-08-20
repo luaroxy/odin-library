@@ -41,14 +41,24 @@
 
     <div class="form-popup" id="myForm">
         <form class="form-container" id="bookForm">
-          <label for="title"><b>Title<abbr title="required" aria-label="required">*</b></label>
-          <input type="text" name="title" required>
+          
+          <div>  
+            <label for="title"><b>Title<abbr title="required" aria-label="required">*</b></label>
+            <input type="text" name="title" required>
+            <p class="help">Please enter the book title.</p>
+          </div>
       
-          <label for="author"><b>Author<abbr title="required" aria-label="required">*</b></label>
-          <input type="text" name="author" required>
+          <div>
+            <label for="author"><b>Author<abbr title="required" aria-label="required">*</b></label>
+            <input type="text" name="author" required>
+            <p class="help">Please enter the book author.</p>
+          </div>
 
-          <label for="pages"><b>Pages<abbr title="required" aria-label="required">*</b></label>
-          <input type="number" name="pages" required>
+          <div>
+            <label for="pages"><b>Pages<abbr title="required" aria-label="required">*</b></label>
+            <input type="number" name="pages" required>
+            <p class="help">Please enter the number of pages.</p>
+          </div>
       
           <label for="read">Read? <input type="checkbox" id="read" class="readBtn" name="read"></label> 
           
